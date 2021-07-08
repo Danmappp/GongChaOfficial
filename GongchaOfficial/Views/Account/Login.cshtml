@@ -1,0 +1,23 @@
+﻿@using BookStoreEntity.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div class="underslider">
+    <h2>JOIN WITH US.</h4>
+</div>
+<div class="grid__row">
+    <div class="login_social">
+        <div class="login_title"><h3 style="font-weight: unset;">Use another service to log in.</h3> <hr style="margin-top: 10px;"></div>
+        <section id="socialLoginForm">
+            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+        </section>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
